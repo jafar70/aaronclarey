@@ -60,12 +60,19 @@ of those sections to manage the look and feel of the site. */
     padding-top: 100px;
     text-align: center;
     background: #eee;
+    padding-bottom: 20px;
 }
 
 .contact-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
+    background: #fff;
+}
+
+.HowItWorks-section{
+    min-height: 100%;
+    padding-top: 100px;
     background: #fff;
 }
 

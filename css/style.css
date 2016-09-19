@@ -78,3 +78,16 @@
 .cliente{
     padding-top:10px;
 }
+
+#jesus{
+    text-align: center;
+}
+
+.list-info  span {
+    float: left;
+    width: 0.9em;
+    font-size: 700%;
+    font-style: italic;
+    line-height: 80%;
+    color: grey;
+}
