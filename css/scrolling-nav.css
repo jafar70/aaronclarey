@@ -27,6 +27,7 @@ html {
     .top-nav-collapse {
         background:#F8F8F8;
         padding: 0;
+        border-bottom: transparent;
     }
 }
 
@@ -89,6 +90,8 @@ of those sections to manage the look and feel of the site. */
 }
 
 .top-nav-collapse {
-        background:#F8F8F8;
-        padding: 0;
-    }
+    background:#F8F8F8;
+    padding: 0;
+    
+}
+    
