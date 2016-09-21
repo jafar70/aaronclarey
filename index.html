@@ -71,26 +71,29 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="background-wrap">
-			<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted" poster="video/ocean.jpg"> 
-				<source src="video/intro.mp4" type="video/mp4">
-				<source src="video/intro.webm" type="video/webm">
-                <source src="video/intro.ogv" type="video/ogg">
-				Video not supported
-			</video>          
-		</div>
 
-        
-		<div class="content text-center">   
-		<div class="container center-div">
-			<h1 class="text-center"> Asshole Consulting</h1>
-			<p>Want to be lied to? Hire a regular consultant. <br><br>Want the truth? Hire an asshole.</p>
-		</div>
+    <div class="video-container">
+        <div class="title-container">
+            <div class="container">
+                <h1 class="text-center headline"> Asshole <br> Consulting</h1>
+            </div>
+            <div class="description">
+                <p class="inner">Want to be lied to? Hire a regular consultant. <br><br>Want the truth? Hire an asshole.</p>
+            </div>
         </div>
-    </section>
-
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth" muted>
+            <source src="video/intro.mp4" type="video/mp4" />
+            <source src="video/intro.webm" type="video/webm">
+            <source src="video/intro.ogv" type="video/ogg">
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="img/ocean.jpg" alt="">
+        </div>
+    </div>
+        
+    <div class="homepage-hero-module">
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
@@ -392,6 +395,78 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+
+    // Resive video
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+        
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+/** Reusable Functions **/
+/********************************************************************/
+
+function scaleVideoContainer() {
+
+    var height = $(window).height();
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+    
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+        windowHeight = $(window).height(),
+        videoWidth,
+        videoHeight;
+    
+    console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width'),
+            windowAspectRatio = windowHeight/windowWidth;
+
+        if (videoAspectRatio > windowAspectRatio) {
+            videoWidth = windowWidth;
+            videoHeight = videoWidth * videoAspectRatio;
+            $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
+        } else {
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+        }
+
+        $(this).width(videoWidth).height(videoHeight);
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+        
+
+    });
+}
+    </script>
     
 </body>
 

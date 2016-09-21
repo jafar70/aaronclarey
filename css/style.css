@@ -25,8 +25,8 @@
     background-color: rgba(0,0,0,0.7);
 }
 .content h1 {
-   font-family: 'Cedarville Cursive', cursive;
-   font-family: 'Tangerine', cursive;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Tangerine', cursive;
     text-align: center;
     font-size: 60px;
     text-transform: uppercase;
@@ -225,3 +225,96 @@ ul {
 .book::after {
   left: -6px;
 }
+
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+  display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important;
+}
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+.video-container .title-container {
+  z-index: 1000;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.headline{
+   font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Tangerine', cursive;
+    text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+}
+
+.video-container .description .inner {
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Tangerine', cursive;
+    text-align: center;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .headline{
+        font-size:40px;
+    }
+    .video-container .description .inner {
+        font-size: 30px;
+    }
+}
+
+.video-container .link {
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
+  text-align: center;
+  z-index: 1001;
+  font-size: 2em;
+  color: #fff;
+}
+.video-container .link a {
+  color: #fff;
+}
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+.video-container video.fillWidth {
+  width: 100%;
+}
+
