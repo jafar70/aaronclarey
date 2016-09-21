@@ -82,6 +82,12 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
+.books-section{
+    min-height: 100%;
+    padding-top: 100px;
+    background: #fff;
+}
+
 .top-nav-collapse {
         background:#F8F8F8;
         padding: 0;
