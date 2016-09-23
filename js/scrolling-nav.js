@@ -7,6 +7,24 @@ $(window).scroll(function() {
     }
 });
 
+$(document).scroll(function(){
+    if($(this).scrollTop() > 50)
+    {   
+       $('.navbar-default .navbar-nav > li > a').css({"color":"#777"});
+    } else {
+       $('.navbar-default .navbar-nav > li > a').css({"color":"#fff"});
+    }
+});
+
+$(document).scroll(function(){
+    if($(this).scrollTop() > 50)
+    {   
+       $('.navbar-default .navbar-brand').css({"color":"#777"});
+    } else {
+       $('.navbar-default .navbar-brand').css({"color":"#fff"});
+    }
+});
+
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
