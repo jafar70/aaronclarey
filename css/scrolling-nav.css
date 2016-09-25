@@ -54,7 +54,7 @@ of those sections to manage the look and feel of the site. */
     min-height: 100%;
     padding-top: 100px;
     text-align: center;
-    background: #fff;
+    color: #fff;
 }
 
 .services-section {
@@ -74,19 +74,17 @@ of those sections to manage the look and feel of the site. */
 .HowItWorks-section{
     min-height: 100%;
     padding-top: 100px;
-    background: #fff;
+    background: #eee;
 }
 
 .testimonials-section{
     min-height: 100%;
     padding-top: 100px;
-    background: #eee;
 }
 
 .books-section{
     min-height: 100%;
     padding-top: 100px;
-    background: #fff;
 }
 
 .top-nav-collapse {
