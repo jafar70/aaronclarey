@@ -176,6 +176,14 @@
     height: 300px;
 }
 
+@media only screen and (max-width:768px) {
+
+.item{
+    height: 450px;
+}
+
+}
+
 .book, .book img, .book::after,
 .book::before {
   border-top-right-radius: 5px;
@@ -371,7 +379,7 @@ section#contact .form-group textarea.form-control {
   height: 236px;
 }
 section#contact .form-control:focus {
-  border-color: #FF8000;
+  border-color: #2098d1;
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
@@ -406,8 +414,8 @@ section#contact .text-danger {
 
 .btn-xl {
   color: white;
-  background-color: #FF8000;
-  border-color: #FF8000;
+  background-color: #2098d1;
+  border-color: #2098d1;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -423,8 +431,8 @@ section#contact .text-danger {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: white;
-  background-color: #ff9933;
-  border-color: #c26100;
+  background-color: #1C88BC;
+  border-color:#1C88BC;
 }
 .btn-xl:active,
 .btn-xl.active,
