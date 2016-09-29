@@ -1,4 +1,6 @@
-// JavaScript File
+
+$(document).ready(function () {
+   // JavaScript File
 $( document ).ready(function() {
 
     // Resive video
@@ -68,48 +70,5 @@ function scaleBannerVideoSize(element){
         
 
     });
-}
-
-$(document).ready(function () {
-    $(".content2").hide();
-    $(".show_hide").on("click", function () {
-        var txt = $(".content2").is(':visible') ? 'Ghost Writing +' : 'Ghost Writing -';
-        $(".show_hide").text(txt);
-        $(this).next('.content2').slideToggle(200);
-    });
-    
-    $(".content3").hide();
-    $(".show_hide2").on("click", function () {
-        var txt = $(".content3").is(':visible') ? 'Courting/Dating +' : 'Courting/Dating -';
-        $(".show_hide2").text(txt);
-        $(this).next('.content3').slideToggle(200);
-    });
-    
-    $(".content4").hide();
-    $(".show_hide3").on("click", function () {
-        var txt = $(".content4").is(':visible') ? 'Education +' : 'Education -';
-        $(".show_hide3").text(txt);
-        $(this).next('.content4').slideToggle(200);
-    });
-    
-    $(".content5").hide();
-    $(".show_hide4").on("click", function () {
-        var txt = $(".content5").is(':visible') ? 'Finance/Economics +' : 'Finance/Economics -';
-        $(".show_hide4").text(txt);
-        $(this).next('.content5').slideToggle(200);
-    });
-    
-    $(".content6").hide();
-    $(".show_hide5").on("click", function () {
-        var txt = $(".content6").is(':visible') ? 'Business Consulting +' : 'Business Consulting -';
-        $(".show_hide5").text(txt);
-        $(this).next('.content6').slideToggle(200);
-    });
-    
-    $(".content7").hide();
-    $(".show_hide6").on("click", function () {
-        var txt = $(".content7").is(':visible') ? 'Career +' : 'Career -';
-        $(".show_hide6").text(txt);
-        $(this).next('.content7').slideToggle(200);
-    });
+} 
 });
